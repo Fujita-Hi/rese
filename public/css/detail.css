@@ -1,0 +1,273 @@
+body {
+    background-color: #dcdcdc;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    left: 70px;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    border-radius: 5px;
+    background-color: #2F5CFF;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.menu-btn span {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn span:before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 15px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 5px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+
+.menu-btn span:before {
+    bottom: 8px;
+}
+
+.menu-btn span:after {
+    top: 8px;
+}
+
+#menu-btn-check:checked~.menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+    bottom: 0;
+    width: 25px;
+    transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+    top: 0;
+    width: 25px;
+    transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+.menu-content {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: #ffffff;
+    transition: all 0.5s;
+}
+
+.menu-content ul li a {
+    list-style: none;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #2F5CFF;
+    text-decoration: none;
+    padding: auto;
+    text-align: auto;
+}
+
+#menu-btn-check:checked~.menu-content {
+    left: 0;
+}
+
+.header-title {
+    color: #2F5CFF;
+    position: fixed;
+    top: 10px;
+    left: 130px;
+}
+
+main {
+    margin: 0px 70px;
+}
+
+.restraunt {
+    padding-top: 80px;
+}
+
+.reservation {
+    color: white;
+}
+
+@media (min-width: 769px) {
+
+    .restraunt {
+        float: left;
+        width: 50%;
+    }
+
+    .reservation {
+        float: left;
+        width: 50%;
+    }
+
+    .reservation__card {
+        margin: 20px 0 0 0;
+    }
+}
+
+.restraunt__contents {
+    width: 90%;
+}
+
+.restraunt__title {
+    display: flex;
+    align-items: center;
+}
+
+.back__button {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.restraunt__name {
+    margin-left: 10px;
+}
+
+.restaurant__img {
+    width: 100%;
+}
+
+.restaurant__tag {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.reservation__card {
+    width: 90%;
+    height: 600px;
+    background-color: #2F5CFF;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+    position: relative;
+}
+
+.reservation--title {
+    padding: 20px 0 0 20px;
+}
+
+.reservation--form {
+    padding-left: 20px;
+}
+
+.reservation--form input {
+    display: block;
+    appearance: none;
+    border: none;
+    height: 1em;
+    margin-bottom: 1em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border-right: 2px solid #dcdcdc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.selectbox-time,
+.selectbox-nop {
+    display: block;
+    align-items: center;
+    position: relative;
+}
+
+.selectbox-time select,
+.selectbox-nop select {
+    appearance: none;
+    border: none;
+    min-width: 90%;
+    height: 2em;
+    margin-bottom: 1em;
+    padding: .4em calc(.8em + 30px) .4em .8em;
+    border-right: 2px solid #dcdcdc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.selectbox-time::after,
+.selectbox-nop::after {
+    position: absolute;
+    right: 15%;
+    top: 10px;
+    width: 12px;
+    height: 10px;
+    background-color: #dcdcdc;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    content: '';
+    pointer-events: none;
+}
+
+.reservation--form select:focus {
+    outline: none;
+}
+
+.confirmation__box {
+    width: 85%;
+    font-size: 0.8em;
+    background-color: #6495ed;
+    border-radius: 5px;
+}
+
+.select__value {
+    padding: 10px 0;
+}
+
+.select__value td {
+    padding: 0 1.1em;
+}
+
+.reserve-button {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    appearance: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3em;
+    border-radius: 0 0 5px 5px;
+    color: white;
+    background-color: #0000cb;
+}

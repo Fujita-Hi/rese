@@ -1,0 +1,189 @@
+@media (max-width: 769px) {
+    .search-box {
+        position: fixed;
+        top: 80px;
+        right: 50px;
+        background-color: white;
+        width: 300px;
+        height: 30px;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .selectbox-area,
+    .selectbox-genre {
+        /*display: inline-flex;
+        align-items: center;
+        position: relative;*/
+        display: none;
+    }
+
+    .search-button {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .fa-magnifying-glass {
+        font-size: 15px;
+        color: #dcdcdc;
+    }
+
+    .shoplist {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 100px 75px 0px 75px;
+    }
+}
+
+@media (min-width: 769px) {
+    .search-box {
+        position: fixed;
+        top: 30px;
+        right: 100px;
+        background-color: white;
+        width: 550px;
+        height: 40px;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .selectbox-area,
+    .selectbox-genre {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .selectbox-area::after,
+    .selectbox-genre::after {
+        position: absolute;
+        right: 15px;
+        width: 10px;
+        height: 7px;
+        background-color: #dcdcdc;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        content: '';
+        pointer-events: none;
+    }
+
+    .selectbox-area select,
+    .selectbox-genre select {
+        appearance: none;
+        min-width: 90px;
+        height: 2.8em;
+        padding: .4em calc(.8em + 30px) .4em .8em;
+        border: none;
+        border-right: 2px solid #dcdcdc;
+        background-color: #fff;
+        color: #333333;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    .selectbox-area select:focus,
+    .selectbox-genre select:focus {
+        outline: none;
+    }
+
+    .search-button {
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .fa-magnifying-glass {
+        font-size: 20px;
+        color: #dcdcdc;
+    }
+
+    .shoplist {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 50px 75px 0px 75px;
+    }
+}
+
+
+
+.search-text {
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.card {
+    width: 360px;
+    height: 325px;
+    margin: 50px auto 0;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card__img img {
+    width: 100%;
+    height: 175px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card__content {
+    padding: 0px 25px;
+}
+
+.card__content-ttl {
+    font-size: 20px;
+    font-weight: 800;
+    background-color: blue;
+    height: 0px;
+}
+
+.card__content-tag {
+    font-size: 14px;
+    text-align: left;
+    /* 親要素にtext-alignを適用すると子要素のinline-block要素に適応される */
+}
+
+.card__content-tag-item {
+    display: inline-block;
+    /* 横並びにするためにinline-blockを指定 */
+}
+
+.card__content-tag-item--last {
+    display: inline-block;
+    /* 横並びにするためにinline-blockを指定 */
+}
+
+.card__content-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__content-cat {
+    width: 100px;
+    padding: 5px 10px;
+    background: #2F5CFF;
+    /* 要素の文字数に応じて幅が変更されるためにinline-blockを指定 */
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.fa-heart {
+    font-size: 30px;
+    color: #dcdcdc;
+}
+
+#good__heart {
+    color: #ff0000;
+}
+
+.good__button {
+    border: none;
+    outline: none;
+    background: transparent;
+}

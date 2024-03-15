@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.done__card {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border-right: 2px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+main {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+}
+
+.done__card {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.done__card--message {
+    margin-top: 70px;
+    font-weight: bold;
+}
+
+.login__button {
+    margin-top: 10px;
+    size: 0.7em;
+    height: 2em;
+    width: 7em;
+    color: white;
+    background-color: #2F5CFF;
+    border-radius: 5px;
+    border: none;
+}
